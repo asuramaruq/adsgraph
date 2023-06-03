@@ -16,11 +16,11 @@ public class Main {
 //        Search<String> dfs = new DepthFirstSearch<>(graph, "Almaty");
 //        outputPath(dfs, "Kyzylorda");
 //
-//        System.out.println("\n--------------------------------");
-//
-//        System.out.println("BFS:");
-//        Search<String> bfs = new BreadthFirstSearch<>(graph, "Almaty");
-//        outputPath(bfs, "Kyzylorda");
+        System.out.println("\n--------------------------------");
+
+        System.out.println("BFS:");
+        Search<String> bfs = new BreadthFirstSearch<>(graph, "Almaty");
+        outputPath(bfs, "Kyzylorda");
     }
 
     public static void outputPath(Search<String> search, String key) {

@@ -34,12 +34,13 @@ public class DijkstraSearch<Vertex> extends Search<Vertex> {
     }
 
     private double getDistance(Vertex node, Vertex target) {
-        for (Edge<Vertex> edge : graph.getEdges(node)) {
-            if (edge.getDest().equals(target))
-                return edge.getWeight();
+        for(Vertex v : graph.adjacencyList(node)){
+            if(graph.getVertex(node).contains(graph.getVertex(target))){
+                return graph.getVertex(node).getWeight(graph.getVertex(target));
+            }
         }
 
-        throw new RuntimeException("Not found!");
+        throw new RuntimeException("Not Found!");
     }
 
     private Vertex getVertexWithMinimumWeight(Set<Vertex> vertices) {
